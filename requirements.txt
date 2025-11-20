@@ -1,0 +1,15 @@
+# torch
+# torchaudio
+transformers==4.24.0
+datasets==2.6.1
+jiwer==2.5.1
+librosa==0.8.1
+SoundFile==0.10.3.post1
+mir-eval==0.7
+asteroid==0.6.0
+espnet==202209
+python-multipart
+
+
+# espnet에서 다음 파일을 Change_stft.py처럼 바꿔주십쇼
+# /Users/youngwoong/.pyenv/versions/3.8.18/lib/python3.8/site-packages/espnet2/layers/stft.py
