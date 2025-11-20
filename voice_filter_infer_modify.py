@@ -91,8 +91,8 @@ if __name__ == "__main__":
     print("\nModel loaded.\n")
 
     # 2. 테스트 파일 지정
-    noisy_wav_path = "/Users/youngwoong/Desktop/YONSEI/2025-2/딥러닝과 응용/teamproject_git/VoiceFiltering_finetuning/test_data/진영웅 김지원.wav"
-    ref_speaker_path = "/Users/youngwoong/Desktop/YONSEI/2025-2/딥러닝과 응용/teamproject_git/VoiceFiltering_finetuning/test_data/진영웅 타겟.wav"
+    noisy_wav_path = "/Users/youngwoong/Desktop/YONSEI/2025-2/딥러닝과 응용/teamproject_git/VoiceFiltering_finetuning/test_data/진영웅김지원한로로.wav"
+    ref_speaker_path = "/Users/youngwoong/Desktop/YONSEI/2025-2/딥러닝과 응용/teamproject_git/VoiceFiltering_finetuning/test_data/김지원 타겟.wav"
 
     noisy, sr = load_wav(noisy_wav_path)
     ref, _ = load_wav(ref_speaker_path)
