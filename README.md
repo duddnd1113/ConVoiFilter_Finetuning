@@ -1,19 +1,36 @@
+# VoiceFiltering Fine-Tuning Project
+
+This repository contains our implementation and fine-tuning pipeline for the **ConVoiFilter** model, originally proposed for target-speaker voice filtering.  
+The base model and methodology reference the official work from:  
+**"ConVoiFilter: An End-to-End Target Speaker Voice Filtering Model"**  
+🔗 https://arxiv.org/pdf/2308.11380.pdf
+
+Our project adapts the original model to our own domain-specific environment and data.
+
 ---
-language: multilingual
-Tags:
-- speech
-license: apache-2.0
+
+## 🎓 Project Context
+
+This work is conducted as part of the course:
+
+**Deep Learning and Applications (IIE4123.01-00)**  
+Yonsei University  
+
+The objective of our team project is to **fine-tune ConVoiFilter to better match our specific target domain**, improving performance under realistic acoustic conditions while maintaining real-time feasibility.
+
+We use the publicly shared ConVoiFilter pretrained model as a baseline and extend it through additional domain-adapted fine-tuning.
+
 ---
 
-# ConVoiFilter
+## 🚀 Goals of This Project
 
-The ConVoiFilter model is designed for the purpose of filtering target speaker voices. For a comprehensive understanding of its functionality and methodology, please refer to the associated paper available at: https://arxiv.org/pdf/2308.11380.pdf
+- Fine-tune ConVoiFilter for real-world target speaker extraction  
+- Improve robustness to complex background noise  
+- Adapt the model to our domain-specific speech characteristics  
+- Optimize the model for real-time usage (low latency & lightweight)  
+- Provide easy-to-use inference scripts for evaluation
 
-For loading and inferring model, you can utilize the provided Colab script. Simply click on the badge below to open the script in Google Colab: 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ekMhvwAEPI0stPRkoodLUlqX9LFuoObf?usp=sharing)
+---
 
-## Contact 
+## 📦 Project Structure
 
-nguyenvulebinh@gmail.com
-
-[![Follow](https://img.shields.io/twitter/follow/nguyenvulebinh?style=social)](https://twitter.com/intent/follow?screen_name=nguyenvulebinh)
