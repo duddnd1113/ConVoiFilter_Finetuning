@@ -33,7 +33,7 @@ def load_wav(path, target_sr=16000):
             sr = target_sr
         return wav, sr
     except Exception as e:
-        print(f"[sf.read 실패, librosa로 재시도] {e}")
+        print("[sf.read 실패, librosa로 재시도]")
         wav, sr = librosa.load(path, sr=target_sr, mono=True)
         return wav, sr
 
@@ -90,9 +90,13 @@ if __name__ == "__main__":
 
     print("\nModel loaded.\n")
 
+    print("Model state_dict keys and shapes:")
+    for k, v in enh_model.state_dict().items():
+        print(f"{k}: {tuple(v.shape)}")
+
     # 2. 테스트 파일 지정
-    noisy_wav_path = "/Users/youngwoong/Desktop/YONSEI/2025-2/딥러닝과 응용/teamproject_git/VoiceFiltering_finetuning/test_data/진영웅김지원한로로.wav"
-    ref_speaker_path = "/Users/youngwoong/Desktop/YONSEI/2025-2/딥러닝과 응용/teamproject_git/VoiceFiltering_finetuning/test_data/김지원 타겟.wav"
+    noisy_wav_path = "/Users/youngwoong/Desktop/YONSEI/2025-2/딥러닝과 응용/teamproject_git/VoiceFiltering_finetuning/test_data/침착맨+한로로.wav"
+    ref_speaker_path = "/Users/youngwoong/Desktop/YONSEI/2025-2/딥러닝과 응용/teamproject_git/VoiceFiltering_finetuning/test_data/침착맨 타겟.wav"
 
     noisy, sr = load_wav(noisy_wav_path)
     ref, _ = load_wav(ref_speaker_path)
