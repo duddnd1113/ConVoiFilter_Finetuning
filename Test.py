@@ -149,7 +149,7 @@ if __name__ == "__main__":
 
     # 2. 테스트 파일 로드
     mix_path = "test_data/침착맨+한로로.wav"
-    ref_path = "test_data/침착맨 타겟.wav"
+    ref_path = "test_data/한로로 타겟.wav"
 
     mix_wav = load_wav_hf(mix_path)
     ref_wav = load_wav_hf(ref_path)
