@@ -1,3 +1,99 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe606ba82bc2763164f4ea2f61ed6567ab5be3a8dd0b999bd2556b3f16cd013e
-size 2184
+{
+  "architectures": [
+    "VoiceFilter"
+  ],
+  "audio_max_lengh": 20,
+  "enh_args": {
+    "batch_size": 8,
+    "batch_type": "folded",
+    "best_model_criterion": [
+      [
+        "valid",
+        "si_snr",
+        "max"
+      ],
+      [
+        "valid",
+        "loss",
+        "min"
+      ]
+    ],
+    "criterions": [
+      {
+        "conf": {
+          "eps": 1e-07
+        },
+        "name": "si_snr",
+        "wrapper": "pit",
+        "wrapper_conf": {
+          "independent_perm": false,
+          "weight": 1.0
+        }
+      }
+    ],
+    "decoder": "stft",
+    "decoder_conf": {
+      "hop_length": 128,
+      "n_fft": 512
+    },
+    "encoder": "stft",
+    "encoder_conf": {
+      "hop_length": 128,
+      "n_fft": 512
+    },
+    "init": "xavier_uniform",
+    "keep_nbest_models": 1,
+    "max_epoch": 5,
+    "model_conf": {
+      "loss_type": "mask_mse",
+      "mask_type": "psm"
+    },
+    "num_workers": 4,
+    "optim": "adam",
+    "optim_conf": {
+      "eps": 1e-08,
+      "lr": 0.001,
+      "weight_decay": 1e-2
+    },
+    "patience": 10,
+    "scheduler": "reducelronplateau",
+    "scheduler_conf": {
+      "factor": 0.7,
+      "mode": "min",
+      "patience": 1
+    },
+    "separator": "conformer_voice_filter",
+    "separator_conf": {
+      "adim": 1024,
+      "aheads": 8,
+      "attention_dropout_rate": 0.1,
+      "concat_after": false,
+      "conformer_activation_type": "swish",
+      "conformer_enc_kernel_size": 5,
+      "conformer_pos_enc_layer_type": "rel_pos",
+      "conformer_self_attn_layer_type": "rel_selfattn",
+      "dropout_rate": 0.1,
+      "input_layer": "linear",
+      "layers": 4,
+      "linear_units": 896,
+      "nonlinear": "relu",
+      "normalize_before": false,
+      "num_spk": 1,
+      "positional_dropout_rate": 0.1,
+      "positionwise_conv_kernel_size": 1,
+      "positionwise_layer_type": "conv1d",
+      "use_cnn_in_conformer": true,
+      "use_macaron_style_in_conformer": true
+    },
+    "val_scheduler_criterion": [
+      "valid",
+      "loss"
+    ],
+    "xvector_emb_dim": 512
+  },
+  "enh_chunk_size": 5,
+  "model_type": "voicefilter",
+  "sample_rate": 16000,
+  "torch_dtype": "float32",
+  "transformers_version": "4.25.1"
+}

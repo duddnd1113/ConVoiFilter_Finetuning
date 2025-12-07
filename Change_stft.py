@@ -1,3 +1,6 @@
+# ConVoiFilter에서는 torchaudio/torch STFT가 오류를 일으키므로 이 Stft 구현으로 전부 교체하여 사용해야 합니다.
+
+
 from typing import Optional, Tuple, Union
 
 import librosa

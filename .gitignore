@@ -1,5 +1,21 @@
 cache/
 results/
-__pycache__
-vessl ssh-key add
-vessl ssh-key add.pub
+test_all_results/
+
+.vscode/
+
+FineTuning/
+venv38/
+__pycache__/
+
+*.pt
+*.pth
+*.wav
+*.mp4
+*.mp3
+*.ckpt
+*.npy
+*.npz
+
+Dataset/
+logs/
