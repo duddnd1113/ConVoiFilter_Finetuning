@@ -1,4 +1,4 @@
-# Convoifilter Fine-Tuning Project
+# ConVoiFilter Fine-Tuning Project
 
 이 Repository는 **ConVoiFilter** 모델을 기반으로 한 **목표 화자 음성 추출(Target Speaker Voice Extraction)** 파인튜닝 프로젝트입니다.  
 원본 모델 및 방법론은 아래 논문을 참고합니다
