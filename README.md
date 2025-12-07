@@ -64,7 +64,9 @@ Dataset/
 └── Target/
 ```
 
-각 폴더 내부는 **동일한 index 이름을 사용**해야 합니다. 
+각 폴더 내부는 **동일한 index 이름을 사용**해야 합니다.
+
+Ex)
 
 Clean/clean_000001.wav
 
@@ -93,7 +95,7 @@ ConVoiFilter는 Target Speaker conditioning 구조이기 때문에
 --depth:          Conformer block 몇 개를 업데이트할지 (0=freeze, 1=하나 열기 …)
 --type:           'full' = 전체 업데이트, 'attn' = attention 계열만 업데이트
 --open_spk_ffn:   Speaker FFN 업데이트 여부 (1=업데이트)
---open_pre_ffn:   Conformer 이전 FFN/Conv 업데이트 여부
+--open_pre_ffn:   Conformer 이전 FFN/Conv 업데이트 여부 (1=업데이트)
 ```
 
 예시 실행
@@ -103,7 +105,7 @@ python Finetuning3.py --depth 2 --type attn --open_spk_ffn 1
 각 옵션은 모델의 특정 모듈만 선택적으로 업데이트할 수 있어 다양한 실험 전략을 손쉽게 구성하도록 합니다.
 
 ---
-## 4. 학습 파라미터 설정
+## 4. Hyperparameter 설정
 
 코드 내부에서 아래 요소를 직접 설정할 수 있습니다
 
